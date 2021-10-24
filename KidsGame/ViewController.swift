@@ -4,6 +4,7 @@ class ViewController: UIViewController {
 
     @IBOutlet weak var iconReferenceButton: UIButton!
     @IBOutlet weak var scoreLabel: UILabel!
+    @IBOutlet weak var buttonsView: UIView!
     
     @IBOutlet weak var button1: UIButton!
     @IBOutlet weak var button2: UIButton!
@@ -50,23 +51,27 @@ class ViewController: UIViewController {
             // Add a point to the score
             actualizeScore(true)
             
-            // Create a new icon
-            iconReferenceButton.setTitle(createRandomIcon(), for: .normal)
-            
-            // Rearrange buttons
-            randomizeButtons()
-            
         } else {
             print("The button has been pressed incorrectly")
             
             // Subtract a point to the score
             actualizeScore(false)
             
-            // Create a new icon
-            iconReferenceButton.setTitle(createRandomIcon(), for: .normal)
-            
-            // Rearrange buttons
-            randomizeButtons()
+        }
+        
+        // Create a new icon
+        iconReferenceButton.setTitle(createRandomIcon(), for: .normal)
+        
+        UIView.animate(withDuration: 0.25) {
+            self.buttonsView.alpha = 0
+        }
+        
+        // Rearrange buttons
+        randomizeButtons()
+        
+        
+        UIView.animate(withDuration: 0.25) {
+            self.buttonsView.alpha = 1
         }
     }
     
