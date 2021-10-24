@@ -2,14 +2,16 @@ import UIKit
 
 class ViewController: UIViewController {
 
-    @IBOutlet weak var iconReferenceImage: UIButton!
+    @IBOutlet weak var iconReferenceButton: UIButton!
+    @IBOutlet weak var scoreLabel: UILabel!
     
     var score = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
-        iconReferenceImage.setTitle(createRandomIcon(), for: .normal)
+        
+        iconReferenceButton.setTitle(createRandomIcon(), for: .normal)
+        setScore(score)
     }
 
     
@@ -22,12 +24,25 @@ class ViewController: UIViewController {
 
     
     @IBAction func buttonPressed(_ sender: UIButton) {
-        let result = compareText(text1: sender.title(for: .normal)!, text2: iconReferenceImage.title(for: .normal)!)
+        let result = compareText(text1: sender.title(for: .normal)!, text2: iconReferenceButton.title(for: .normal)!)
         
-        if(result) {
-            print("ha pulsado el boton bien")
+        if result {
+            print("The button has been pressed correctly")
+            
+            // Add a point to the score
+            actualizeScore(true)
+            
+            // Create a new icon
+            iconReferenceButton.setTitle(createRandomIcon(), for: .normal)
+            
         } else {
-            print("Ha pulsado el boton mal")
+            print("The button has been pressed incorrectly")
+            
+            // Subtract a point to the score
+            actualizeScore(false)
+            
+            // Create a new icon
+            iconReferenceButton.setTitle(createRandomIcon(), for: .normal)
         }
     }
     
@@ -39,9 +54,16 @@ class ViewController: UIViewController {
         }
     }
     
-    func actualizeScore() {
+    // 'true' to add, 'false' to subtract
+    func actualizeScore(_ action: Bool) {
+        let points = 1
         
+        score += action ? points : -points
+        setScore(score)
     }
     
+    func setScore(_ score: Int) {
+        scoreLabel.text = "\(score) points"
+    }
 }
 

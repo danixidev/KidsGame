@@ -129,7 +129,8 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="iconReferenceImage" destination="Bpa-lY-K86" id="222-58-cRC"/>
+                        <outlet property="iconReferenceButton" destination="Bpa-lY-K86" id="6z9-e6-tzO"/>
+                        <outlet property="scoreLabel" destination="kj6-zb-IIQ" id="D2L-xC-MJ1"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
