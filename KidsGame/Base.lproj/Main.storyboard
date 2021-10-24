@@ -129,6 +129,12 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="button1" destination="b9w-zg-xC2" id="5xz-AX-zwu"/>
+                        <outlet property="button2" destination="aru-Gb-S9U" id="GuC-ks-lZD"/>
+                        <outlet property="button3" destination="cKh-yq-e1t" id="7tf-ON-Rcl"/>
+                        <outlet property="button4" destination="lpV-Zf-JNk" id="NAD-mR-WbR"/>
+                        <outlet property="button5" destination="hEr-Fv-uIw" id="7dA-WI-Jnb"/>
+                        <outlet property="button6" destination="Lq5-Ru-435" id="62g-c5-S5Q"/>
                         <outlet property="iconReferenceButton" destination="Bpa-lY-K86" id="6z9-e6-tzO"/>
                         <outlet property="scoreLabel" destination="kj6-zb-IIQ" id="D2L-xC-MJ1"/>
                     </connections>
