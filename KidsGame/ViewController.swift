@@ -19,6 +19,7 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        // Add all buttons to a single array to simplify the code on the randomisation of buttons
         buttons.append(button1)
         buttons.append(button2)
         buttons.append(button3)
@@ -30,7 +31,7 @@ class ViewController: UIViewController {
         setScore(score)
     }
 
-    
+    // Creates a random icon from the array, and returns it
     func createRandomIcon() -> String {
         let icons = ["✡️", "☸️", "⚛️", "☪️", "☯️", "♒️" ]
         let generatedNumber = Int.random(in: 0...icons.count-1)
@@ -38,8 +39,9 @@ class ViewController: UIViewController {
         return icons[generatedNumber]
     }
 
-    
+    // Generic function for a button press
     @IBAction func buttonPressed(_ sender: UIButton) {
+        // Compares the text between the button and the reference
         let result = compareText(text1: sender.title(for: .normal)!, text2: iconReferenceButton.title(for: .normal)!)
         
         if result {
@@ -80,19 +82,20 @@ class ViewController: UIViewController {
     func actualizeScore(_ action: Bool) {
         let points = 1
         
-        score += action ? points : -points
+        score += action ? points : -points  // if action is true it adds points, if false it subtracts them
         setScore(score)
     }
     
+    // Parses the score to show points at the end of it
     func setScore(_ score: Int) {
         scoreLabel.text = "\(score) points"
     }
     
-    
+    // Rearranges the buttons randomly
     func randomizeButtons() {
         var icons = ["✡️", "☸️", "⚛️", "☪️", "☯️", "♒️" ]
         
-        if icons.count == buttons.count {
+        if icons.count == buttons.count { // If the amount matches it continues
             for button in buttons {
                 // Generate random number to select icon
                 let generatedNumber = Int.random(in: 0...icons.count-1)
@@ -104,6 +107,7 @@ class ViewController: UIViewController {
                 icons.remove(at: generatedNumber)
             }
         } else {
+            // Shows error message if it doesnt match, to prevent crashes
             print("icons' and buttons' length doesnt match [randomizeButtons()]")
         }
     }
