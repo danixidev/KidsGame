@@ -4,7 +4,6 @@ class ViewController: UIViewController {
 
     @IBOutlet weak var iconReferenceButton: UIButton!
     @IBOutlet weak var scoreLabel: UILabel!
-    @IBOutlet weak var buttonsView: UIView!
     
     @IBOutlet weak var button1: UIButton!
     @IBOutlet weak var button2: UIButton!
@@ -12,9 +11,12 @@ class ViewController: UIViewController {
     @IBOutlet weak var button4: UIButton!
     @IBOutlet weak var button5: UIButton!
     @IBOutlet weak var button6: UIButton!
-
+    @IBOutlet weak var button7: UIButton!
+    @IBOutlet weak var button8: UIButton!
+    @IBOutlet weak var button9: UIButton!
     
-    var score = 0
+    
+    var score = 10000
     var buttons: [UIButton] = []
     
     override func viewDidLoad() {
@@ -27,6 +29,9 @@ class ViewController: UIViewController {
         buttons.append(button4)
         buttons.append(button5)
         buttons.append(button6)
+        buttons.append(button7)
+        buttons.append(button8)
+        buttons.append(button9)
         
         iconReferenceButton.setTitle(createRandomIcon(), for: .normal)
         setScore(score)
@@ -34,7 +39,7 @@ class ViewController: UIViewController {
 
     // Creates a random icon from the array, and returns it
     func createRandomIcon() -> String {
-        let icons = ["✡️", "☸️", "⚛️", "☪️", "☯️", "♒️" ]
+        let icons = ["✡️", "☸️", "⚛️", "☪️", "☯️", "♒️", "♈️", "⛎", "♓️"]
         let generatedNumber = Int.random(in: 0...icons.count-1)
         
         return icons[generatedNumber]
@@ -62,17 +67,8 @@ class ViewController: UIViewController {
         // Create a new icon
         iconReferenceButton.setTitle(createRandomIcon(), for: .normal)
         
-        UIView.animate(withDuration: 0.25) {
-            self.buttonsView.alpha = 0
-        }
-        
         // Rearrange buttons
         randomizeButtons()
-        
-        
-        UIView.animate(withDuration: 0.25) {
-            self.buttonsView.alpha = 1
-        }
     }
     
     func compareText(text1: String, text2: String) -> Bool {
@@ -98,7 +94,7 @@ class ViewController: UIViewController {
     
     // Rearranges the buttons randomly
     func randomizeButtons() {
-        var icons = ["✡️", "☸️", "⚛️", "☪️", "☯️", "♒️" ]
+        var icons = ["✡️", "☸️", "⚛️", "☪️", "☯️", "♒️", "♈️", "⛎", "♓️"]
         
         if icons.count == buttons.count { // If the amount matches it continues
             for button in buttons {
