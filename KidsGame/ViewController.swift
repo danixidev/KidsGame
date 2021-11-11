@@ -16,9 +16,9 @@ class ViewController: UIViewController {
     @IBOutlet weak var button8: UIButton!
     @IBOutlet weak var button9: UIButton!
     
-    var score = 10000
+    var score = 0
     var buttons: [UIButton] = []
-    var secondsRemaining = 30
+    var secondsRemaining = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -36,7 +36,9 @@ class ViewController: UIViewController {
         
         iconReferenceButton.setTitle(createRandomIcon(), for: .normal)
         setScore(score)
-        startTimer(secondsLabel)
+        
+        NotificationCenter.default.addObserver(self, selector: #selector(startGameNotif), name: Notification.Name("startGame"), object: nil)
+        startGame()
     }
 
     // Creates a random icon from the array, and returns it
@@ -127,11 +129,30 @@ class ViewController: UIViewController {
                 label.text = "\(self.secondsRemaining) seconds"
             } else {
                 Timer.invalidate()
+                self.goToFinish()
             }
         }
                 
     }
     
     
+    
+    func goToFinish() {
+        performSegue(withIdentifier: "goToFinish", sender: nil)
+    }
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let destination = segue.destination as! FinishController
+        destination.score = score
+    }
+    
+    
+    @objc func startGameNotif(notification: NSNotification) {
+        startGame()
+    }
+    
+    func startGame() {
+        secondsRemaining = 3
+        startTimer(secondsLabel)
+    }
 }
 
