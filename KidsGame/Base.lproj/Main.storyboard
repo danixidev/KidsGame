@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="2oa-om-btr">
     <device id="retina5_5" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
@@ -8,10 +8,63 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
+        <!--Main Menu Controller-->
+        <scene sceneID="WQU-DA-hQm">
+            <objects>
+                <viewController id="2oa-om-btr" customClass="MainMenuController" customModule="KidsGame" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="TGs-OW-aNa">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Kids Game" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="s84-XB-XEE">
+                                <rect key="frame" x="0.0" y="179" width="414" height="110"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="s84-XB-XEE" secondAttribute="height" multiplier="207:55" id="Nht-us-uqu"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="65"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sgJ-Vc-bQr">
+                                <rect key="frame" x="120" y="390" width="174" height="59"/>
+                                <color key="backgroundColor" systemColor="systemBlueColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="sgJ-Vc-bQr" secondAttribute="height" multiplier="174:59" id="FIW-6V-gP6"/>
+                                </constraints>
+                                <state key="normal" title="Start game">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="StartGameButtonPressed:" destination="2oa-om-btr" eventType="touchUpInside" id="808-DO-sip"/>
+                                    <action selector="buttonPressed:" destination="NTO-NA-Gqv" eventType="touchUpInside" id="egQ-Ny-pYR"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="UjH-YI-o5B"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="UjH-YI-o5B" firstAttribute="trailing" secondItem="s84-XB-XEE" secondAttribute="trailing" id="Nla-hB-tC4"/>
+                            <constraint firstItem="sgJ-Vc-bQr" firstAttribute="leading" secondItem="UjH-YI-o5B" secondAttribute="leading" constant="120" id="WEQ-uM-I5z"/>
+                            <constraint firstItem="UjH-YI-o5B" firstAttribute="trailing" secondItem="sgJ-Vc-bQr" secondAttribute="trailing" constant="120" id="gbt-uG-vvP"/>
+                            <constraint firstItem="s84-XB-XEE" firstAttribute="leading" secondItem="UjH-YI-o5B" secondAttribute="leading" id="kIC-K3-nqI"/>
+                            <constraint firstItem="s84-XB-XEE" firstAttribute="top" secondItem="UjH-YI-o5B" secondAttribute="top" constant="179" id="lUa-V6-8cr"/>
+                            <constraint firstItem="sgJ-Vc-bQr" firstAttribute="top" secondItem="s84-XB-XEE" secondAttribute="bottom" constant="101" id="w0V-YH-yKQ"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="StartGameButton" destination="sgJ-Vc-bQr" id="irr-Bc-Mav"/>
+                        <segue destination="BYZ-38-t0r" kind="showDetail" identifier="goToGame" id="EBK-J8-WIF"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1Is-rV-pvR" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="NTO-NA-Gqv" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="-886.95652173913049" y="111.68478260869566"/>
+        </scene>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="KidsGame" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController modalPresentationStyle="fullScreen" id="BYZ-38-t0r" customClass="ViewController" customModule="KidsGame" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <subviews>
@@ -318,6 +371,7 @@
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="HaF-2K-Cmo" secondAttribute="height" multiplier="46:83" constant="115" id="23K-7O-L2s"/>
                                         </constraints>
+                                        <fontDescription key="fontDescription" type="system" weight="thin" pointSize="20"/>
                                         <state key="normal" title="Play again">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>

@@ -14,6 +14,7 @@
 		0D4D2D2927218CA600D0AD53 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0D4D2D2827218CA600D0AD53 /* Assets.xcassets */; };
 		0D4D2D2C27218CA600D0AD53 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0D4D2D2A27218CA600D0AD53 /* LaunchScreen.storyboard */; };
 		0D877C37273D192D00DF4CEB /* FinishController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D877C36273D192D00DF4CEB /* FinishController.swift */; };
+		0D877C39273D319C00DF4CEB /* MainMenuController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D877C38273D319C00DF4CEB /* MainMenuController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		0D4D2D2B27218CA600D0AD53 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0D4D2D2D27218CA600D0AD53 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0D877C36273D192D00DF4CEB /* FinishController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinishController.swift; sourceTree = "<group>"; };
+		0D877C38273D319C00DF4CEB /* MainMenuController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainMenuController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +68,7 @@
 				0D4D2D2827218CA600D0AD53 /* Assets.xcassets */,
 				0D4D2D2A27218CA600D0AD53 /* LaunchScreen.storyboard */,
 				0D4D2D2D27218CA600D0AD53 /* Info.plist */,
+				0D877C38273D319C00DF4CEB /* MainMenuController.swift */,
 			);
 			path = KidsGame;
 			sourceTree = "<group>";
@@ -144,6 +147,7 @@
 				0D4D2D2027218CA300D0AD53 /* AppDelegate.swift in Sources */,
 				0D877C37273D192D00DF4CEB /* FinishController.swift in Sources */,
 				0D4D2D2227218CA300D0AD53 /* SceneDelegate.swift in Sources */,
+				0D877C39273D319C00DF4CEB /* MainMenuController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
