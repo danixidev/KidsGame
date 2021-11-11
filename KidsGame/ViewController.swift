@@ -71,6 +71,8 @@ class ViewController: UIViewController {
         randomizeButtons()
     }
     
+    
+    // Compares two strings, returns true if they match, false if they dont match
     func compareText(text1: String, text2: String) -> Bool {
         if text1 == text2 {
             return true
@@ -88,6 +90,7 @@ class ViewController: UIViewController {
     }
     
     // Parses the score to show points at the end of it
+    // This is used to simplify code
     func setScore(_ score: Int) {
         scoreLabel.text = "\(score) points"
     }

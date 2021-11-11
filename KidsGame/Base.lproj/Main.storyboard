@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="retina3_5" orientation="portrait" appearance="light"/>
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -13,7 +13,7 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="KidsGame" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" text="Kids game" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xxo-Bh-qhD">
                                 <rect key="frame" x="20" y="0.0" width="198.5" height="49"/>
@@ -22,7 +22,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1Bf-5c-Ha5">
-                                <rect key="frame" x="-40.5" y="79" width="401" height="401"/>
+                                <rect key="frame" x="-13" y="266" width="401" height="401"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="b9w-zg-xC2">
                                         <rect key="frame" x="0.0" y="1" width="128" height="128"/>
@@ -116,7 +116,7 @@
                                 </constraints>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="28 points" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kj6-zb-IIQ">
-                                <rect key="frame" x="79" y="69" width="162" height="0.0"/>
+                                <rect key="frame" x="106.5" y="211" width="162" height="45"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="275" id="Wq5-lR-5Gk"/>
                                 </constraints>
@@ -135,10 +135,10 @@
                                 </variation>
                             </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uUl-TD-Qb9">
-                                <rect key="frame" x="155" y="54" width="10" height="10"/>
+                                <rect key="frame" x="111.5" y="54" width="152" height="152"/>
                                 <subviews>
                                     <button opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bpa-lY-K86">
-                                        <rect key="frame" x="0.0" y="0.0" width="10" height="10"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="152" height="152"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="140"/>
                                         <state key="normal" title="💟"/>
                                     </button>
@@ -185,11 +185,6 @@
                                 <exclude reference="21S-81-1gk"/>
                                 <exclude reference="E9L-bl-kXS"/>
                                 <exclude reference="yeD-T4-6tk"/>
-                                <exclude reference="Jns-04-Wyd"/>
-                                <exclude reference="day-xp-oeb"/>
-                                <exclude reference="F4A-3h-6ht"/>
-                                <exclude reference="gpd-cN-UmW"/>
-                                <exclude reference="hYE-81-b8a"/>
                                 <exclude reference="0ex-of-qE0"/>
                                 <exclude reference="84m-kj-KV1"/>
                                 <exclude reference="KkJ-Mz-MM5"/>
@@ -197,6 +192,11 @@
                                 <exclude reference="foe-qQ-omn"/>
                                 <exclude reference="pUp-E7-34g"/>
                                 <exclude reference="rJ0-66-bxp"/>
+                                <exclude reference="F4A-3h-6ht"/>
+                                <exclude reference="gpd-cN-UmW"/>
+                                <exclude reference="hYE-81-b8a"/>
+                                <exclude reference="Jns-04-Wyd"/>
+                                <exclude reference="day-xp-oeb"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=compact">
@@ -204,14 +204,14 @@
                                 <include reference="LGU-dP-7aN"/>
                                 <include reference="phd-6j-Ugz"/>
                                 <include reference="21S-81-1gk"/>
-                                <include reference="Jns-04-Wyd"/>
-                                <include reference="F4A-3h-6ht"/>
-                                <include reference="gpd-cN-UmW"/>
                                 <exclude reference="0ex-of-qE0"/>
                                 <exclude reference="R5N-66-fo6"/>
                                 <include reference="foe-qQ-omn"/>
                                 <exclude reference="pUp-E7-34g"/>
                                 <exclude reference="rJ0-66-bxp"/>
+                                <include reference="F4A-3h-6ht"/>
+                                <include reference="gpd-cN-UmW"/>
+                                <include reference="Jns-04-Wyd"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=regular-widthClass=compact">
@@ -219,10 +219,10 @@
                                 <include reference="bVT-FQ-lxX"/>
                                 <include reference="E9L-bl-kXS"/>
                                 <include reference="yeD-T4-6tk"/>
-                                <include reference="day-xp-oeb"/>
-                                <include reference="hYE-81-b8a"/>
                                 <include reference="84m-kj-KV1"/>
                                 <include reference="KkJ-Mz-MM5"/>
+                                <include reference="hYE-81-b8a"/>
+                                <include reference="day-xp-oeb"/>
                             </mask>
                         </variation>
                     </view>
