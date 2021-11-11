@@ -4,6 +4,7 @@ class ViewController: UIViewController {
 
     @IBOutlet weak var iconReferenceButton: UIButton!
     @IBOutlet weak var scoreLabel: UILabel!
+    @IBOutlet weak var secondsLabel: UILabel!
     
     @IBOutlet weak var button1: UIButton!
     @IBOutlet weak var button2: UIButton!
@@ -15,9 +16,9 @@ class ViewController: UIViewController {
     @IBOutlet weak var button8: UIButton!
     @IBOutlet weak var button9: UIButton!
     
-    
     var score = 10000
     var buttons: [UIButton] = []
+    var secondsRemaining = 30
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -35,6 +36,7 @@ class ViewController: UIViewController {
         
         iconReferenceButton.setTitle(createRandomIcon(), for: .normal)
         setScore(score)
+        startTimer(secondsLabel)
     }
 
     // Creates a random icon from the array, and returns it
@@ -115,5 +117,21 @@ class ViewController: UIViewController {
             print("icons' and buttons' length doesnt match [randomizeButtons()]")
         }
     }
+    
+        
+    func startTimer(_ label: UILabel!) {
+            
+        Timer.scheduledTimer(withTimeInterval: 1.0, repeats: true) { (Timer) in
+            if self.secondsRemaining > 0 {
+                self.secondsRemaining -= 1
+                label.text = "\(self.secondsRemaining) seconds"
+            } else {
+                Timer.invalidate()
+            }
+        }
+                
+    }
+    
+    
 }
 
