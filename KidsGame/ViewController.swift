@@ -151,6 +151,8 @@ class ViewController: UIViewController {
     }
     
     func startGame() {
+        score = 0
+        setScore(score)
         secondsRemaining = 30
         startTimer(secondsLabel)
     }
